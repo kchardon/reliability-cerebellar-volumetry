@@ -2,7 +2,7 @@
 
 This repository contains the data and code used for the publication *Towards Reliable Measurement of Cerebellar Morphology : A comparative assessment of segmentation pipelines* by Katia Chardon<sup>1,2</sup>, Ting Xu<sup>3</sup>, Marie Chupin<sup>4</sup>, Edouard Duchesnay<sup>1</sup>, Davide Boido<sup>1</sup> and Charles Laidi<sup>2,5</sup>.
 
-These materials have been made available to promote reproducibility and open science. The Hangzhou Normal University open dataset (HNU) used in this publication is available through the Consortium for Reliability and Reproducibility [1].
+These materials have been made available to promote reproducibility and open science. The Hangzhou Normal University open dataset (HNU) used in this publication is available through the Consortium for Reliability and Reproducibility (https://fcon_1000.projects.nitrc.org/indi/CoRR/html/hnu_1.html) [1].
 
 <sup>1</sup> BAOBAB, NeuroSpin, CEA, Université Paris-Saclay, CNRS, Gif-sur-Yvette, France 
 <sup>2</sup> Institut Mondor de Recherche Biomédicale (IMRB), INSERM, Université Paris-Est Créteil, Créteil, France 
@@ -58,7 +58,10 @@ To run the same analysis, follow these steps:
 
 ## License
 
-This repository is licensed under the [MIT License](LICENSE.md). By using, distributing, or modifying this software and data, you agree to the terms and conditions outlined in the license.
+- Code: MIT License ([`LICENSE`](LICENSE.md))
+- Figures and CSV metrics: CC-BY-NC 4.0 ([`LICENSE-DATA`](LICENSE-DATA.md))
+
+The figures and derived data are based on the HNU dataset from the Consortium for Reliability and Reproducibility (CoRR), accessed via INDI / NITRC. Consistent with the policies of the 1000 Functional Connectome Project, usage of the original data is unrestricted for non-commercial research purposes only. Original CoRR data are not redistributed in this repository.
 
 ## References
 
