@@ -1,4 +1,4 @@
-Attribution-NonCommercial 4.0 International
+Creative Commons Attribution-NonCommercial 4.0 International
 
 This license applies to all figures and derived data (CSV metric files) included in this repository.
 
