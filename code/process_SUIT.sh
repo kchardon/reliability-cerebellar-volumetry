@@ -4,16 +4,37 @@
 #==============================================================================
 # Created on 08/09/2025 by Katia Chardon
 
-# Process SUIT outputs of HNU
+# Process SUIT outputs of HNU to get the volumes of each lobule
+
+# Here is the organization of the folders. 
+# Don't hesitate to modify the code to match yours.
+
+# The source_data should be organized by sessions and then by subjects
+# The Suit folder is named "SuitX" with X being the number of the session,
+# except for session 1 which is just named "Suit"
+# source_data
+# |_ Suit
+#    |_ sub-XX
+# |_ Suit2
+#    |_ sub-XX
+#
+# code is where you have the hnu_get_suit_volumes.py file
+# env is the folder of the python environment
+#
+# You will obtain in dest_data, this organisation
+# dest_data
+# |_ sub-XX
+#    |_ ses-XX
+# with all the intermediate files and the final sub-XX_ses-XX_volumes.csv
 #==============================================================================
 #==============================================================================
 echo "Process SUIT outputs -------"
 
 # Variables
 
-path=""
-dest_data=${path}/vbm_suit
-
+code=reliability-cerebellar-volumetry/code
+env=reliability-cerebellar-volumetry/.reliability
+dest_data=reliability-cerebellar-volumetry/outputs/suit
 source_data=HNU/derivatives
 
 mkdir $dest_data
@@ -63,8 +84,8 @@ for ses in {1..10}; do
         fslmaths $atlas_out -mul $bin_out $final
 
         # Extract volumes
-        source $path/.reliability/bin/activate
-        python3 $path/hnu_get_suit_volumes.py $final $filepath $sub_output/${sub}_ses-${ses_str}_volumes.csv
+        source $env/bin/activate
+        python3 $code/hnu_get_suit_volumes.py $final $filepath $sub_output/${sub}_ses-${ses_str}_volumes.csv
 
     done
 done

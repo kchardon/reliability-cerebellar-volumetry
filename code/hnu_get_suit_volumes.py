@@ -30,14 +30,15 @@ def process_images(atlas_path, subject_path, output_path):
     masker = NiftiLabelsMasker(
         labels_img=atlas_path,
         verbose=5,
+        standardize_confounds=False
     )
 
     # Extraction of temporal series
     time_series = masker.fit_transform(subject_path)
 
     # DataFrame of temporal series
-    df = pd.DataFrame(time_series)
-    df.to_csv(output_path, index=False)
+    df = pd.DataFrame(columns = list(masker.lut_['index'][1:]), data = time_series.reshape([1,34]))
+    df.to_csv(output_path)
 
     print(f"Output saved to {output_path}")
 
