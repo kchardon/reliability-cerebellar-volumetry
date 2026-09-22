@@ -47,7 +47,7 @@ To run the code in this repository, you will need the following dependencies:
 
 ## Reproducing the Analysis
 
-You can run only the analysis part using the already computed ICC files with `analysis.ipynb`.
+You can run only the analysis part using the already computed ICC files with `analysis.ipynb`. You will still need to create a python environment with the libraries from `requirements.txt`.
 
 To run entirely the same analysis, follow these steps:
 
