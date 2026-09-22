@@ -91,8 +91,7 @@ for sub in sorted(os.listdir(ACAPULCO_DIR)):
         if os.path.exists(aseg_path):
             with open(aseg_path) as f:
                 for line in f:
-                    # e.g. "# Measure EstimatedTotalIntraCranialVol, eTIV, Estimated Total Intracranial Volume, 1523456.789, mm^3"
-                    if line.startswith("# Measure") and "eTIV" in line:
+                    if line.startswith("# Measure EstimatedTotalIntraCranialVol"):
                         etiv = float(line.split(",")[3])
                         break
             if etiv is None:
